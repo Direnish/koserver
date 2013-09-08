@@ -66,10 +66,9 @@ void MagicInstance::Run()
 
 	if (pSkill == nullptr
 		|| pSkillCaster == nullptr
-		|| (result = UserCanCast()) == SkillUseFail)
+		|| (result = UserCanCast()))
 	{
-		SendSkillFailed();
-		return;
+		
 	}
 
 	// If the skill's already been handled (e.g. death taunts), 
